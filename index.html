@@ -4,226 +4,24 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Kurs Takip</title>
-
 <style>
-*{box-sizing:border-box}
-
-body{
-  margin:0;
-  font-family:Arial,sans-serif;
-  background:#f5f6f8;
-  color:#20242a;
-}
-
-.wrap{
-  max-width:1100px;
-  margin:auto;
-  padding:22px;
-}
-
-.head,.panel{
-  background:#fff;
-  border:1px solid #e1e5ea;
-  border-radius:16px;
-}
-
-.head{
-  padding:18px 20px;
-  margin-bottom:16px;
-}
-
-.logo{
-  font-size:22px;
-  font-weight:800;
-}
-
-.sub{
-  font-size:13px;
-  color:#737b86;
-  margin-top:4px;
-}
-
-.courses{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:12px;
-  margin-bottom:16px;
-}
-
-.course{
-  background:#fff;
-  border:1px solid #e1e5ea;
-  border-radius:14px;
-  padding:15px;
-  cursor:pointer;
-}
-
-.course.active{
-  border-color:#697481;
-  box-shadow:0 3px 12px #0001;
-}
-
-.ct{
-  font-weight:800;
-}
-
-.count{
-  font-size:13px;
-  color:#747d88;
-  margin-top:6px;
-}
-
-.top{
-  padding:17px 18px;
-  border-bottom:1px solid #e6e8eb;
-  display:flex;
-  gap:12px;
-  align-items:center;
-  justify-content:space-between;
-  flex-wrap:wrap;
-}
-
-.title{
-  font-weight:800;
-}
-
-.month{
-  font-size:13px;
-  color:#6e7680;
-  margin-top:4px;
-}
-
-.actions{
-  display:flex;
-  gap:8px;
-  flex-wrap:wrap;
-}
-
-input,select,button{
-  font:inherit;
-}
-
-input,select,button{
-  border:1px solid #d8dde3;
-  border-radius:9px;
-  padding:9px 11px;
-  background:#fff;
-}
-
-button{
-  cursor:pointer;
-}
-
-.primary{
-  background:#20252b;
-  color:#fff;
-  border-color:#20252b;
-}
-
-.tablewrap{
-  overflow:auto;
-}
-
-table{
-  border-collapse:collapse;
-  width:100%;
-  min-width:720px;
-}
-
-th,td{
-  border-right:1px solid #e7e9ec;
-  border-bottom:1px solid #e7e9ec;
-  text-align:center;
-  height:48px;
-}
-
-th{
-  height:44px;
-  background:#fafbfc;
-  font-size:12px;
-  color:#5f6771;
-}
-
-th:first-child,
-td:first-child{
-  text-align:left;
-  padding:0 14px;
-  min-width:190px;
-  position:sticky;
-  left:0;
-}
-
-th:first-child{
-  background:#fafbfc;
-}
-
-.att{
-  width:100%;
-  height:100%;
-  border:0;
-  border-radius:0;
-  font-size:20px;
-}
-
-.att:hover{
-  background:#f4f6f8;
-}
-
-.name{
-  font-weight:650;
-}
-
-.pay{
-  font-size:13px;
-  font-weight:700;
-  padding:8px 10px;
-  border-radius:999px;
-}
-
-.paid{
-  background:#e9f7ee;
-  color:#18733c;
-}
-
-.unpaid{
-  background:#fff1f1;
-  color:#b42318;
-}
-
-.footer{
-  padding:13px 18px;
-  color:#737b86;
-  font-size:12px;
-  background:#fafbfc;
-}
-
-@media(max-width:650px){
-
-  .wrap{
-    padding:10px;
-  }
-
-  .courses{
-    gap:8px;
-  }
-
-  .course{
-    padding:12px;
-  }
-
-  .actions{
-    width:100%;
-  }
-
-  .actions input{
-    flex:1;
-    min-width:0;
-  }
-
-  .logo{
-    font-size:19px;
-  }
-}
+*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;background:#f5f6f8;color:#20242a}
+.wrap{max-width:1100px;margin:auto;padding:22px}.head,.panel{background:#fff;border:1px solid #e1e5ea;border-radius:16px}
+.head{padding:18px 20px;margin-bottom:16px}.logo{font-size:22px;font-weight:800}.sub{font-size:13px;color:#737b86;margin-top:4px}
+.courses{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:16px}
+.course{background:#fff;border:1px solid #e1e5ea;border-radius:14px;padding:15px;cursor:pointer}.course.active{border-color:#697481;box-shadow:0 3px 12px #0001}
+.ct{font-weight:800}.count{font-size:13px;color:#747d88;margin-top:6px}
+.top{padding:17px 18px;border-bottom:1px solid #e6e8eb;display:flex;gap:12px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+.title{font-weight:800}.month{font-size:13px;color:#6e7680;margin-top:4px}.actions{display:flex;gap:8px;flex-wrap:wrap}
+input,select,button{font:inherit}input,select,button{border:1px solid #d8dde3;border-radius:9px;padding:9px 11px;background:#fff}button{cursor:pointer}.primary{background:#20252b;color:#fff;border-color:#20252b}
+.tablewrap{overflow:auto}table{border-collapse:collapse;width:100%;min-width:720px}th,td{border-right:1px solid #e7e9ec;border-bottom:1px solid #e7e9ec;text-align:center;height:48px}
+th{height:44px;background:#fafbfc;font-size:12px;color:#5f6771}th:first-child,td:first-child{text-align:left;padding:0 14px;min-width:190px;position:sticky;left:0}th:first-child{background:#fafbfc}.att{width:100%;height:100%;border:0;border-radius:0;font-size:20px}.att:hover{background:#f4f6f8}
+.name{font-weight:650}.pay{font-size:13px;font-weight:700;padding:8px 10px;border-radius:999px}.paid{background:#e9f7ee;color:#18733c}.unpaid{background:#fff1f1;color:#b42318}
+.status{font-size:13px;font-weight:700;padding:8px 10px;border-radius:999px;border:0}
+.activeStatus{background:#e9f7ee;color:#18733c}
+.leftStatus{background:#fff1f1;color:#b42318}
+.footer{padding:13px 18px;color:#737b86;font-size:12px;background:#fafbfc}
+@media(max-width:650px){.wrap{padding:10px}.courses{gap:8px}.course{padding:12px}.actions{width:100%}.actions input{flex:1;min-width:0}.logo{font-size:19px}}
 </style>
 </head>
 
@@ -232,8 +30,8 @@ th:first-child{
 <div class="wrap">
 
 <div class="head">
-  <div class="logo">Kurs Takip</div>
-  <div class="sub">Öğrenci • Devam • Aylık Ödeme</div>
+<div class="logo">Kurs Takip</div>
+<div class="sub">Öğrenci • Devam • Aylık Ödeme</div>
 </div>
 
 <div class="courses" id="courses"></div>
@@ -243,21 +41,18 @@ th:first-child{
 <div class="top">
 
 <div>
-  <div class="title" id="courseTitle">POMEM</div>
-  <div class="month" id="monthTitle"></div>
+<div class="title" id="courseTitle">POMEM</div>
+<div class="month" id="monthTitle"></div>
 </div>
 
 <div class="actions">
 
-<input
- id="search"
- placeholder="Öğrenci ara..."
- oninput="renderTable()"
->
+<input id="search"
+placeholder="Öğrenci ara..."
+oninput="renderTable()">
 
-<button
- class="primary"
- onclick="addStudent()">
+<button class="primary"
+onclick="addStudent()">
 + Öğrenci
 </button>
 
@@ -265,9 +60,8 @@ th:first-child{
 ⚙ Ayarlar
 </button>
 
-<select
- id="month"
- onchange="changeMonth(this.value)">
+<select id="month"
+onchange="changeMonth(this.value)">
 </select>
 
 </div>
@@ -285,15 +79,11 @@ th:first-child{
 
 </div>
 
-<div
- class="footer"
- id="footer">
-</div>
+<div class="footer" id="footer"></div>
 
 </section>
 
 </div>
-
 
 <script>
 
@@ -303,477 +93,538 @@ const state=
 JSON.parse(localStorage.getItem(KEY)||'null')
 ||
 {
- course:'POMEM',
+course:'POMEM',
 
- courses:{
+courses:{
 
- POMEM:{
-   days:[1,3,5],
+POMEM:{
+days:[1,3,5],
 
-   students:[
-    {name:'Ayşe Yılmaz',pay:false,a:{}},
-    {name:'Mehmet Kaya',pay:true,a:{}},
-    {name:'Elif Demir',pay:false,a:{}},
-    {name:'Can Özkan',pay:true,a:{}}
-   ]
- },
+students:[
+{name:'Ayşe Yılmaz',pay:false,status:'active',a:{}},
+{name:'Mehmet Kaya',pay:true,status:'active',a:{}},
+{name:'Elif Demir',pay:false,status:'active',a:{}},
+{name:'Can Özkan',pay:true,status:'active',a:{}}
+]
+},
 
- BESYO:{
-   days:[2,4,6],
-   students:[]
- },
+BESYO:{
+days:[2,4,6],
+students:[]
+},
 
- PMYO:{
-   days:[1,4],
-   students:[]
- }
+PMYO:{
+days:[1,4],
+students:[]
+}
 
- },
+},
 
- months:['2026-10']
+months:[
+'2026-10',
+'2026-11',
+'2026-12',
+'2027-01',
+'2027-02',
+'2027-03',
+'2027-04',
+'2027-05',
+'2027-06',
+'2027-07',
+'2027-08',
+'2027-09'
+]
+
 };
 
 
 function save(){
 
- localStorage.setItem(
-   KEY,
-   JSON.stringify(state)
- );
+localStorage.setItem(
+KEY,
+JSON.stringify(state)
+);
 
 }
 
 
 function monthLabel(m){
 
- let [y,mo]=m.split('-');
+let [y,mo]=m.split('-');
 
- return new Intl.DateTimeFormat(
-   'tr-TR',
-   {
-     month:'long',
-     year:'numeric'
-   }
- ).format(
-   new Date(+y,+mo-1,1)
- );
+return new Intl.DateTimeFormat(
+'tr-TR',
+{
+month:'long',
+year:'numeric'
+}
+).format(
+new Date(+y,+mo-1,1)
+);
 
 }
 
 
 function datesFor(m,days){
 
- let [y,mo]=m.split('-');
+let [y,mo]=m.split('-');
 
- let last=
-   new Date(+y,+mo,0).getDate();
+let last=
+new Date(+y,+mo,0).getDate();
 
- let a=[];
+let a=[];
 
- for(
-   let d=1;
-   d<=last;
-   d++
- ){
+for(
+let d=1;
+d<=last;
+d++
+){
 
-   let x=
-     new Date(+y,+mo-1,d);
+let x=
+new Date(+y,+mo-1,d);
 
-   let w=x.getDay();
+let w=x.getDay();
 
-   let wi=
-     w===0 ? 7 : w;
+let wi=
+w===0 ? 7 : w;
 
-   if(days.includes(wi)){
+if(days.includes(wi)){
 
-     a.push({
-       date:d,
-       wi
-     });
+a.push({
+date:d,
+wi
+});
 
-   }
+}
 
- }
+}
 
- return a;
+return a;
+
 }
 
 
 function renderCourses(){
 
- let names=[
-   'POMEM',
-   'BESYO',
-   'PMYO'
- ];
+let names=[
+'POMEM',
+'BESYO',
+'PMYO'
+];
 
- document.getElementById(
-   'courses'
- ).innerHTML=
+document.getElementById(
+'courses'
+).innerHTML=
 
- names.map(n=>`
+names.map(n=>`
 
- <div
-   class="course ${state.course===n?'active':''}"
-   onclick="selectCourse('${n}')">
+<div
+class="course ${state.course===n?'active':''}"
+onclick="selectCourse('${n}')">
 
-   <div class="ct">
-     ${n}
-   </div>
+<div class="ct">
+${n}
+</div>
 
-   <div class="count">
-     ${state.courses[n].students.length}
-     öğrenci
-   </div>
+<div class="count">
+${state.courses[n].students.length}
+öğrenci
+</div>
 
- </div>
+</div>
 
- `).join('');
+`).join('');
 
 }
 
 
 function renderMonths(){
 
- let s=
-   document.getElementById('month');
+let s=
+document.getElementById('month');
 
- s.innerHTML=
-   state.months.map(m=>`
+s.innerHTML=
+state.months.map(m=>`
 
-   <option value="${m}">
-     ${monthLabel(m)}
-   </option>
+<option value="${m}">
+${monthLabel(m)}
+</option>
 
- `).join('');
+`).join('');
 
- s.value=state.months[0];
+s.value=state.months[0];
 
 }
 
 
 let currentMonth=
- state.months[0];
+state.months[0];
 
 
 function renderTable(){
 
- let c=
-   state.courses[state.course];
+let c=
+state.courses[state.course];
 
- let ds=
-   datesFor(
-     currentMonth,
-     c.days
-   );
+c.students.forEach(s=>{
+if(!s.status)
+s.status='active';
+});
 
- let q=
-   document
-   .getElementById('search')
-   .value
-   .toLowerCase();
+let ds=
+datesFor(
+currentMonth,
+c.days
+);
 
-
- document.getElementById(
-   'courseTitle'
- ).textContent=
-   state.course;
-
-
- document.getElementById(
-   'monthTitle'
- ).textContent=
-   monthLabel(currentMonth);
+let q=
+document
+.getElementById('search')
+.value
+.toLowerCase();
 
 
- document.getElementById(
-   'thead'
- ).innerHTML=
-
- '<tr>' +
-
- '<th>Öğrenci</th>' +
-
- ds.map(x=>`
-
- <th>
-   ${[
-    'Paz',
-    'Pzt',
-    'Sal',
-    'Çar',
-    'Per',
-    'Cum',
-    'Cmt',
-    'Paz'
-   ][x.wi]}
-   <br>
-   ${String(x.date).padStart(2,'0')}.${currentMonth.split('-')[1]}
- </th>
-
- `).join('') +
-
- '<th>' +
- monthLabel(currentMonth)
- .split(' ')[0]
- .toUpperCase() +
- ' ÖDEME</th>' +
-
- '</tr>';
+document.getElementById(
+'courseTitle'
+).textContent=
+state.course;
 
 
- document.getElementById(
-   'tbody'
- ).innerHTML=
-
- c.students
-
- .filter(s=>
-   s.name
-   .toLowerCase()
-   .includes(q)
- )
-
- .map((s)=>`
-
- <tr>
-
- <td>
-   <span class="name">
-     ${s.name}
-   </span>
- </td>
-
- ${
-
- ds.map(x=>{
-
-   let k=
-     currentMonth+
-     '-' +
-     String(x.date)
-     .padStart(2,'0');
-
-   let v=
-     s.a[k] || '—';
-
-   return `
-
-   <td>
-
-   <button
-     class="att"
-     onclick="attendance(
-       ${c.students.indexOf(s)},
-       '${k}'
-     )">
-
-     ${
-       v==='yes'
-       ? '✅'
-       : v==='no'
-       ? '❌'
-       : '—'
-     }
-
-   </button>
-
-   </td>
-
-   `;
-
- }).join('')
-
- }
-
- <td>
-
- <button
-   class="pay ${s.pay?'paid':'unpaid'}"
-   onclick="payment(
-     ${c.students.indexOf(s)}
-   )">
-
-   ${s.pay?'Ödedi':'Ödemedi'}
-
- </button>
-
- </td>
-
- </tr>
-
- `).join('');
+document.getElementById(
+'monthTitle'
+).textContent=
+monthLabel(currentMonth);
 
 
- document.getElementById(
-   'footer'
- ).textContent=
+document.getElementById(
+'thead'
+).innerHTML=
 
- state.course+
- ' eğitim günleri: '+
+'<tr>' +
 
- c.days.map(
-   d=>[
-     '',
-     'Pzt',
-     'Sal',
-     'Çar',
-     'Per',
-     'Cum',
-     'Cmt',
-     'Paz'
-   ][d]
- ).join(' • ');
+'<th>Öğrenci</th>' +
+
+ds.map(x=>`
+
+<th>
+${[
+'Paz',
+'Pzt',
+'Sal',
+'Çar',
+'Per',
+'Cum',
+'Cmt'
+][x.wi]}
+<br>
+${String(x.date).padStart(2,'0')}.${currentMonth.split('-')[1]}
+</th>
+
+`).join('') +
+
+'<th>' +
+monthLabel(currentMonth)
+.split(' ')[0]
+.toUpperCase() +
+' ÖDEME</th>' +
+
+'<th>DURUM</th>' +
+
+'</tr>';
+
+
+document.getElementById(
+'tbody'
+).innerHTML=
+
+c.students
+
+.filter(s=>
+s.name
+.toLowerCase()
+.includes(q)
+)
+
+.map(s=>`
+
+<tr>
+
+<td>
+<span class="name">
+${s.name}
+</span>
+</td>
+
+${
+
+ds.map(x=>{
+
+let k=
+currentMonth+
+'-' +
+String(x.date)
+.padStart(2,'0');
+
+let v=
+s.a[k] || '—';
+
+return `
+
+<td>
+
+<button
+class="att"
+onclick="attendance(
+${c.students.indexOf(s)},
+'${k}'
+)">
+
+${
+v==='yes'
+? '✅'
+: v==='no'
+? '❌'
+: '—'
+}
+
+</button>
+
+</td>
+
+`;
+
+}).join('')
+
+}
+
+<td>
+
+<button
+class="pay ${s.pay?'paid':'unpaid'}"
+onclick="payment(
+${c.students.indexOf(s)}
+)">
+
+${s.pay?'Ödedi':'Ödemedi'}
+
+</button>
+
+</td>
+
+<td>
+
+<button
+class="status ${s.status==='left'?'leftStatus':'activeStatus'}"
+onclick="studentStatus(
+${c.students.indexOf(s)}
+)">
+
+${s.status==='left'
+?'Kursu bıraktı'
+:'Kursa devam ediyor'}
+
+</button>
+
+</td>
+
+</tr>
+
+`).join('');
+
+
+document.getElementById(
+'footer'
+).textContent=
+
+state.course+
+' eğitim günleri: '+
+
+c.days.map(
+d=>[
+'',
+'Pzt',
+'Sal',
+'Çar',
+'Per',
+'Cum',
+'Cmt',
+'Paz'
+][d]
+).join(' • ');
 
 }
 
 
 function selectCourse(n){
 
- state.course=n;
+state.course=n;
 
- currentMonth=
-   state.months[0];
+currentMonth=
+state.months[0];
 
- save();
+save();
 
- renderAll();
+renderAll();
 
 }
 
 
 function attendance(i,k){
 
- let s=
-   state.courses[
-     state.course
-   ].students[i];
+let s=
+state.courses[
+state.course
+].students[i];
 
- let v=
-   s.a[k] || '—';
+let v=
+s.a[k] || '—';
 
- s.a[k]=
-   v==='—'
-   ? 'yes'
-   : v==='yes'
-   ? 'no'
-   : '—';
+s.a[k]=
+v==='—'
+? 'yes'
+: v==='yes'
+? 'no'
+: '—';
 
- save();
+save();
 
- renderTable();
+renderTable();
 
 }
 
 
 function payment(i){
 
- state.courses[
-   state.course
- ].students[i].pay=
+state.courses[
+state.course
+].students[i].pay=
 
- !state.courses[
-   state.course
- ].students[i].pay;
+!state.courses[
+state.course
+].students[i].pay;
 
- save();
+save();
 
- renderTable();
+renderTable();
 
- renderCourses();
+renderCourses();
+
+}
+
+
+function studentStatus(i){
+
+let s=
+state.courses[
+state.course
+].students[i];
+
+s.status=
+s.status==='left'
+? 'active'
+: 'left';
+
+save();
+
+renderTable();
 
 }
 
 
 function addStudent(){
 
- let n=
-   prompt(
-     'Öğrenci adı soyadı:'
-   );
+let n=
+prompt(
+'Öğrenci adı soyadı:'
+);
 
- if(
-   !n ||
-   !n.trim()
- ) return;
+if(
+!n ||
+!n.trim()
+)
+return;
 
- state.courses[
-   state.course
- ].students.push({
+state.courses[
+state.course
+].students.push({
 
-   name:n.trim(),
+name:n.trim(),
 
-   pay:false,
+pay:false,
 
-   a:{}
+status:'active',
 
- });
+a:{}
 
- save();
+});
 
- renderAll();
+save();
+
+renderAll();
 
 }
 
 
 function changeMonth(v){
 
- currentMonth=v;
+currentMonth=v;
 
- renderTable();
+renderTable();
 
 }
 
 
 function settings(){
 
- let x=
-   prompt(
-     'Eğitim günlerini numara ile gir:\n\n'+
-     '1=Pzt, 2=Sal, 3=Çar, 4=Per,\n'+
-     '5=Cum, 6=Cmt, 7=Paz\n\n'+
-     'Örnek: 1,3,5'
-   );
+let x=
+prompt(
+'Eğitim günlerini numara ile gir:\n\n'+
+'1=Pzt, 2=Sal, 3=Çar, 4=Per,\n'+
+'5=Cum, 6=Cmt, 7=Paz\n\n'+
+'Örnek: 1,3,5'
+);
 
- if(!x) return;
+if(!x)
+return;
 
- let d=
-   x.split(',')
-   .map(Number)
-   .filter(
-     n=>n>=1 && n<=7
-   );
+let d=
+x.split(',')
+.map(Number)
+.filter(
+n=>n>=1&&n<=7
+);
 
- if(!d.length){
+if(!d.length){
 
-   alert(
-     'Geçerli gün girilmedi.'
-   );
+alert(
+'Geçerli gün girilmedi.'
+);
 
-   return;
+return;
 
- }
+}
 
- state.courses[
-   state.course
- ].days=
-   [...new Set(d)]
-   .sort();
+state.courses[
+state.course
+].days=
+[
+...new Set(d)
+].sort();
 
- save();
+save();
 
- renderTable();
+renderTable();
 
 }
 
 
 function renderAll(){
 
- renderCourses();
+renderCourses();
 
- renderMonths();
+renderMonths();
 
- renderTable();
+renderTable();
 
 }
 
